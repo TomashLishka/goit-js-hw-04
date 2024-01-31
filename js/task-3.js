@@ -1,23 +1,19 @@
 let profile = {
     username: "Jacob", 
     playTime: 300,
-
+    
     getInfo() {
         return `${this.username} has ${this.playTime} active hours`;
     },
 
-     updatePlayTime(hours) {
-        this.playTime(hours);
+    changeUsername(newName) {
+        this.username = newName;
     },
 
-     changeUsername(newName) {
-        this.username(newName);
+     updatePlayTime(hours) {
+        this.playTime = hours + this.playTime;
     }
-
-    
-
 };
-
 
 console.log(profile.getInfo()); // "Jacob has 300 active hours!"
 
